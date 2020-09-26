@@ -13,3 +13,8 @@ echo "Third value of arithmetic calculation :" $result3
 
 result4=$(($(($num1%$num2))+$num3));
 echo "Fourth value of arithmetic calculation :" $result4
+
+declare -A store
+#Store ia a dictionary where value1,value2,value3 and value4 are keyvalues of a dictionary
+store=(["Value1"]=$result1 ["Value2"]=$result2 ["Value3"]=$result3 ["Value4"]=$result4)
+echo "Value store in dictionary :" ${store[@]}
